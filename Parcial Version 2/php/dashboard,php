@@ -1,0 +1,54 @@
+<?php 
+     include('../php/conexionBD.php');
+     $conexionBD = BD::crearInstancia();
+     if($conexionBD != null){
+        $resultado = $conexionBD->query("SELECT ID_ADMINISTRADOR, NOMBRE, CARGO, NUM_EMPLEADO FROM db_math_kidz.administrador;");
+     }
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD HTML/CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/tabla.css">
+</head>
+<body>
+    <h1>Administradores</h1>
+    <div class="botones-pestaña">
+        <button class="pestaña" onclick="cambiarPestana('profesor')">Profesor</button>
+        <button class="pestaña" onclick="cambiarPestana('administrador')">Administrador</button>
+        <button class="pestaña" onclick="cambiarPestana('estudiantes')">Estudiantes</button>
+        <button class="pestaña" onclick="cambiarPestana('acudientes')">Acudientes</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Cargo</th>
+                <th>Número de Empleado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <?php 
+        if (mysqli_num_rows($resultado) > 0) {
+            // Recorrer los registros
+            while ($fila = mysqli_fetch_assoc($resultado)) {
+        ?>
+        <tbody>
+            <tr>
+                <td><?php echo $fila['ID_ADMINISTRADOR'] ?></td>
+                <td><?php echo $fila['NOMBRE'] ?></td>
+                <td><?php echo $fila['CARGO'] ?></td>
+                <td><?php echo $fila['NUM_EMPLEADO'] ?></td>
+                <td>
+                    <button class="editar">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </td>
+            </tr>
+            <?php } } ?>
+            <!-- Aquí puedes agregar más filas con los datos de los empleados -->
+        </tbody>
+    </table>
+</body>
+</html>

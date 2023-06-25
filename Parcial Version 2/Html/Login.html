@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inicio de sesión</title>
+  <link rel="stylesheet" href="../CSS/Login.css">
+  <link rel="icon" href="../img/Logo2.png">
+  <script>
+    function redirectToPage() {
+      window.location.href = "inicio.html";
+    }
+    </script>
+</head>
+<body>
+  <div id="contenedor">
+    <div id="contenedorcentrado">
+      <div id="login">
+        <h2>Iniciar sesión</h2>
+        <form>
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" placeholder="Usuario" required>
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" placeholder="Contraseña" required>
+          <button type="submit">Iniciar sesión</button>
+        </form>
+        <div class="additional-options">
+          <a href="Registro.html">Registrarse</a><br />
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+      </div>
+      <div id="derecho">
+        <div class="logo-empresa">
+          <img src="../img/Logo.png" alt="Logo de la empresa">
+        </div>
+        <hr>
+        <div class="Incio">
+          <button type="button" onclick="redirectToPage()" class="boton">Pagina principal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
