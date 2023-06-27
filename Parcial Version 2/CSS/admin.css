@@ -1,85 +1,66 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+.boton {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
+.boton:hover {
+    background-color: #d32f2f;
+}
 .container {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .sidebar {
-    width: 250px;
-    min-height: 100vh;
-    background-color: #333;
-    color: #fff;
+    background-color: #fad78df3;
     padding: 20px;
-    position: relative;
-}
-
-.sidebar h2 {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
-}
-
-.sidebar img.logo {
-    display: block;
-    margin: 100px;
-    border-radius: 20px;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
+    width: 200px;
 }
 
 .content {
-    background-image: url(../img/Fondo3.jpg);
-    flex: 1;
+    flex-grow: 1;
     padding: 20px;
 }
 
-header {
+h1, h2 {
+    color: #333;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-header h1 {
-    color: #fff;
-    text-align: center;
-    margin-top: 0;
-    font-size: 28px;
+table th, table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+table td button {
+    margin-right: 5px;
 }
 
 footer {
-    margin-top: 750px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    color: #777;
-}
-
-/* Estilos responsive */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
 }
