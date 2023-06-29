@@ -1,210 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Centro de administracion</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/admin.css">
-    <link rel="icon" href="../img/Logo2.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="../CSS/admin.css">
+  <link rel="icon" href="../img/Logo2.png">
 </head>
-<script>
-    function redirectToPage(){
-        window.location.href='MathKids.html';
-    }
-
-</script>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Panel de Administración</h2>
-            <ul class="menu">
-                <li><a href="#">----------</a></li>
-                <li><a href="#">----------</a></li>
-                <li><a href="#">----------</a></li>
-                <li><a href="#">-----------</a></li>
-            </ul>
-            <button type="button" onclick="redirectToPage()" class="boton">Salir</button>
-        </aside>
-        <div class="content">
-            <header>
-                <h1>Dashboard de Administrador</h1>
-            </header>
-            <main>
-                <section>
-                    <h2>Administradores</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Correo electrónico</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Aquí se mostrará la tabla de administradores -->
-                            <tr>
-                                <td>1</td>
-                                <td>Administrador 1</td>
-                                <td>admin1@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Administrador 2</td>
-                                <td>admin2@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Administrador 3</td>
-                                <td>admin3@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <section>
-                    <h2>Estudiantes</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Correo electrónico</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Aquí se mostrará la tabla de estudiantes -->
-                            <tr>
-                                <td>1</td>
-                                <td>Estudiante 1</td>
-                                <td>estudiante1@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Estudiante 2</td>
-                                <td>estudiante2@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Estudiante 3</td>
-                                <td>estudiante3@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <section>
-                    <h2>Profesores</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Correo electrónico</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Aquí se mostrará la tabla de profesores -->
-                            <tr>
-                                <td>1</td>
-                                <td>Profesor 1</td>
-                                <td>profesor1@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Profesor 2</td>
-                                <td>profesor2@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Profesor 3</td>
-                                <td>profesor3@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <section>
-                    <h2>Acudientes</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Correo electrónico</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Aquí se mostrará la tabla de acudientes -->
-                            <tr>
-                                <td>1</td>
-                                <td>Acudiente 1</td>
-                                <td>acudiente1@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Acudiente 2</td>
-                                <td>acudiente2@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Acudiente 3</td>
-                                <td>acudiente3@example.com</td>
-                                <td>
-                                    <button class="btn-edit">Editar</button>
-                                    <button class="btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </main>
-            <footer>
-                <p>© 2023 Panel de Administración</p>
-            </footer>
-        </div>
-    </div>
-</body>
+    <header>
+      <h1>Panel de Administrador</h1>
+    </header>
+  
+    <nav>
+      <ul>
+        <li><a href="DashboardStudent.html">Perfil Estudiante</a></li>
+        <li><a href="DashboardProfesor.html">Perfil Porfesor</a></li>
+        <li><a href="DashboardAcudiente.html">Perfil Acudiente</a></li>
+        <li><a href="MathKids.html">Salir</a></li>
+      </ul>
+    </nav>
+  
+    <main>
+      <section>
+        <h2>Inicio</h2>
+        <p>Bienvenido al panel de administrador.</p>
+      </section>
+  
+      <section>
+        <h2>Usuarios</h2>
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+          <tr>
+            <td>Usuario 1</td>
+            <td>usuario1@example.com</td>
+            <td>Admin</td>
+            <td>
+              <button class="btn-edit">Editar</button>
+              <button class="btn-delete">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Usuario 2</td>
+            <td>usuario2@example.com</td>
+            <td>Usuario</td>
+            <td>
+              <button class="btn-edit">Editar</button>
+              <button class="btn-delete">Eliminar</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+  
+      <section>
+        <h2>Configuración</h2>
+        <p>Aquí puedes configurar las opciones del panel de administrador.</p>
+      </section>
+    </main>
+  
+    <footer>
+      <p>Panel de Administrador - Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>

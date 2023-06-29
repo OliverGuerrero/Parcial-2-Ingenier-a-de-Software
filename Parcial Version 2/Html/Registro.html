@@ -1,38 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrate</title>
-    <link rel="icon" href="../img/Logo2.png" type="image/png">
-    <link rel="stylesheet" href="../CSS/Registro.css">
-    <script>
-        function redirectToMainPage(){
-            window.location.href='MathKids.html';
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v8 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        }
-    </script>
-</head>
-<body>
-    <form action="registro.html" method="get">
-        <h2 class="Titulo">
-            Registrate
-        </h2>
-        <img src="" alt="" srcset="../img/Logo2.png">
-        <label for="nombre">Nombre</label>
-        <input type="nombre" id="nombre" name="nombre" required><br><br>
-        <label for="Apellido">Apellido</label>
-        <input type="Apellido" id="Apellido" name="Apellido" required><br><br>
-        <label for="Fecha">Fecha de nacimiento</label>
-        <input type="date" id="Fecha" name="Fecha" required><br><br>
-        <label for="email">Correo electronico</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="User">Username</label>
-        <input type="Username" id="Username" name="Username" required><br><br>
-        <label for="Pass">Contraseña</label>
-        <input type="password" id="Pass" name="pass" required><br><br>
-        <input type="submit" value="Enviar">
-        <button type="boton" onclick="redirectToMainPage()">Salir</button>
-    </form>
-</body>
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="../CSS/Registro.css">
+
+		<style>
+			.wrapper {
+				background-image: url(images/boy-computer-excited-excitement.jpg);
+				background-size: cover;
+				background-position: center;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="image-holder">
+				<img src="" alt="">
+			</div>
+			<div class="form-inner">
+				<form action="">
+					<div class="form-header">
+						<h3>Crear Cuenta</h3>
+						<img src="images/sign-up.png" alt="" class="sign-up-icon">
+					</div>
+					<div class="form-group">
+						<label for=""><h4>Nombre</h4></label>
+						<input type="text" class="form-control" data-validation="length alphanumeric" data-validation-length="3-12">
+					</div>
+					<div class="form-group">
+						<label for="">Apellido</label>
+						<input type="text" class="form-control" data-validation="length alphanumeric" data-validation-length="3-12">
+					</div>
+					<div class="form-group">
+						<label for="">Fecha de Nacimiento</label>
+						<input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+						
+					</div>
+					<div class="form-group">
+						<label for="">UserName</label>
+						<input type="text" class="form-control" data-validation="length alphanumeric" data-validation-length="3-12">
+					</div>
+					<div class="form-group" >
+						<label for="">Password:</label>
+					    <input type="password" id="contrasena" placeholder="Contraseña" required class="form-control" data-validation="length" data-validation-length="min8">
+					</div>
+					<div class="form-group">
+						<label for="">Correo electronico:</label>
+						<input type="text" class="form-control" data-validation="length alphanumeric" data-validation-length="3-12">
+					</div>
+					<button>crear cuenta</button>
+
+					<button type="button" onclick="window.location.href='https://www.otrapagina.com'">Salir</button>
+				    <div class="form-group">
+				    </div>
+					
+				    </form>
+				 
+                
+
+
+
+
+
+			</div>
+			
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery.form-validator.min.js"></script>
+		<script src="js/main.js"></script>
+
 </html>

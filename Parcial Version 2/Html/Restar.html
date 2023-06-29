@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de Suma</title>
+  <link rel="stylesheet" href="../CSS/Restar.css">
+  <link rel="icon" href="../img/Logo2.png">
+</head>
+<body>
+  <header>
+    <h1>Ejercicio de Restar</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="operation"></div>
+      <input type="number" id="answer" placeholder="Ingrese su respuesta">
+      <button id="checkButton" onclick="checkAnswer()">Comprobar</button>
+      <p id="result"></p>
+    </div>
+  </main>
+
+  <script>
+    var exerciseCount = 0;
+
+    function checkAnswer() {
+      var answer = parseInt(document.getElementById('answer').value);
+      var result = document.getElementById('result');
+
+      var num1 = parseInt(document.querySelector('.number1').textContent);
+      var num2 = parseInt(document.querySelector('.number2').textContent);
+      var correctAnswer = num1 - num2;
+
+      if (answer === correctAnswer) {
+        result.textContent = '¡Respuesta correcta!';
+        setTimeout(() => {
+            result.textContent = '';
+            generateNewExercise();
+        }, 2000);
+        } else {
+        result.textContent = 'Respuesta incorrecta. Inténtalo de nuevo.';
+      }
+    }
+
+    function generateNewExercise() {
+      var num1 = Math.floor(Math.random() * 5) +1;
+      var num2 = Math.floor(Math.random() * 5) +1;
+
+      var operation = document.querySelector('.operation');
+      operation.innerHTML = `
+        <span class="number number1">${num1}</span>
+        <span>-</span>
+        <span class="number number2">${num2}</span>
+      `;
+
+      document.getElementById('answer').value = '';
+      document.getElementById('result').textContent = '';
+
+      exerciseCount++;
+      if (exerciseCount === 30) {
+        disableButton();
+      }
+    }
+
+    function disableButton() {
+      var button = document.getElementById('checkButton');
+      button.disabled = true;
+    }
+
+    generateNewExercise();
+  </script>
+</body>
+</html>

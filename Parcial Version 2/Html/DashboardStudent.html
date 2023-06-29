@@ -9,8 +9,24 @@
   <!-- Font Awesome Cdn Link -->
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!--Script para el funcionamiento de los botones-->
+  <script>
+  function redirectToPage(){
+    window.location.href="Sumar.html";
+  }
+  function redirectToPage2(){
+    window.location.href="Restar.Html"
+  }
+  function redirectToPage3(){
+    window.location.href="Conteo.html"
+  }
+  function redirectToPage4(){
+
+    window.location.href="Tutoriales.html"
+  }
+</script>
 </head>
 <body>
   <div class="container">
@@ -24,10 +40,11 @@
           <i class="fas fa-home"></i>
           <span class="nav-item">Home</span>
         </a></li>
-        <li><a href="">
-          <i class="fas fa-user"></i>
+       <!--  <li><a href="">
+       <i class="fas fa-user"></i>
           <span class="nav-item">Perfil</span>
         </a></li>
+      -->
        <!-- <li><a href="">
           <i class="fas fa-wallet"></i>
           <span class="nav-item">Wallet</span>
@@ -66,25 +83,27 @@
           <i class="fas fa-plus"></i>
           <h3>Suma</h3>
           <p>Inicia tus ejercicios practicos</p>
-          <button>Inicia</button>
+          <button type="button" onclick="redirectToPage()" class="boton">Inicia</button>
         </div>
         <div class="card">
           <i class="fas fa-minus"></i>
           <h3>Resta</h3>
           <p>Inicia tus ejercicios Practicos</p>
-          <button>Inicia</button>
+          <button type="button" onclick="redirectToPage2()" class="boton">Inicia</button>
         </div>
         <div class="card">
-          <i class="fas fa-font"></i>
+          <i class="">123
+          </i>
+        <!--<i class="fas fa-font"></i>-->
           <h3>Conteo de Numeros</h3>
           <p>Cuenta de numeros 1 al 10</p>
-          <button>Inicia</button>
+          <button type="button" onclick="redirectToPage3()" class="boton">Inicia</button>
         </div>
         <div class="card">
           <i class="fas fa-book"></i>
           <h3>Tutoriales</h3>
           <p>Apartado de videos tutoriales</p>
-          <button>visita ahora</button>
+          <button type="button" onclick="redirectToPage4()" class="boton">Visita Ahora</button>
         </div>
       </div>
 

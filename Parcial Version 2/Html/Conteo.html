@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contando para niños de preescolar</title>
+  <link rel="stylesheet" href="../CSS/Conteo.css">
+  <link rel="icon" href="../img/Logo2.png">
+</head>
+<body>
+  <header>
+    <h1>Contando para niños de preescolar</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="card-title">Contando con MathKids</div>
+      <div class="card-number" id="number">-</div>
+      <input type="number" class="answer-input" id="answer" placeholder="Ingresa el número siguiente">
+      <button onclick="checkAnswer()">Verificar</button>
+      <div class="message" id="message"></div>
+    </div>
+  </main>
+
+  <script>
+    // Obtener elementos del DOM
+    const numberElement = document.getElementById('number');
+    const answerElement = document.getElementById('answer');
+    const messageElement = document.getElementById('message');
+
+    // Generar un número aleatorio entre 1 y 10
+    function generateNumber() {
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      numberElement.textContent = randomNumber;
+    }
+
+    // Verificar si la respuesta es correcta
+    function checkAnswer() {
+      const number = parseInt(numberElement.textContent);
+      const answer = parseInt(answerElement.value);
+
+      if (answer === number + 1) {
+        messageElement.textContent = '¡Respuesta correcta!';
+        generateNumber();
+        answerElement.value = '';
+      } else {
+        messageElement.textContent = 'Respuesta incorrecta. Inténtalo de nuevo.';
+      }
+    }
+
+    // Generar el primer número
+    generateNumber();
+  </script>
+</body>
+</html>

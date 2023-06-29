@@ -1,0 +1,90 @@
+
+/* Estilos CSS aquí */
+body {
+    background-image: url(../img/Fondo2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .operation {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: aquamarine;
+      padding: 20px;
+      text-align: center;
+      display: block;
+      width: 50%;
+      height: 40%;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      position: relative;
+      -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      -ms-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      -o-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      top: -70px;
+    }
+    
+    input {
+      display: inline-block;
+      margin: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      -webkit-box-shadow: 1px 1px 3px #ccc;
+      -moz-box-shadow: 1px 1px 3px #ccc;
+      -ms-box-shadow: 1px 1px 3px #ccc;
+      -o-box-shadow: 1px 1px 3px #ccc;
+      box-shadow: 1px 1px 3px #ccc;
+      color: #666;
+      font-size: 14px;
+      line-height: 20px;
+      outline: none;
+      margin-top: 80px;
+    
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      outline: none;
+    }
+    
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+    }
