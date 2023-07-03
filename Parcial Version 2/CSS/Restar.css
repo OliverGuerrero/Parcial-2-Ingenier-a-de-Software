@@ -19,9 +19,11 @@ body {
     }
     
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      margin: 0;
+      padding: 15px;
+      position: relative;
       text-align: center;
     }
     .operation {
@@ -29,10 +31,13 @@ body {
         margin-bottom: 20px;
       }
     main {
+      
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+
+      
     }
     .container {
       background-color: aquamarine;

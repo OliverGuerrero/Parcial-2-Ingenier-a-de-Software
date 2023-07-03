@@ -7,9 +7,7 @@
   <link rel="icon" href="../img/Logo2.png" />
 
   <!-- Font Awesome Cdn Link -->
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
   <link rel="stylesheet" href="../css/style.css" />
   <!--Script para el funcionamiento de los botones-->
   <script>
@@ -26,7 +24,48 @@
 
     window.location.href="Tutoriales.html"
   }
+  function direccion1(){
+    window.location.href="Sumar.html"
+  }
+  function direccion2(){
+      window.location.href="Restar.html"
+    }
+  function direccion3(){
+      window.location.href="Conteo.html"
+    }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#upload-form").submit(function(event) {
+      event.preventDefault(); // Evita el envío del formulario por defecto
+
+      var fileInput = $("#file-input")[0];
+      var file = fileInput.files[0];
+
+      if (file) {
+        var formData = new FormData();
+        formData.append("file", file);
+
+        // Enviar la tarea al servidor utilizando AJAX
+        $.ajax({
+          url: "/submit-task",
+          type: "POST",
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function(response) {
+            $("#message").text("Tarea entregada exitosamente.");
+          },
+          error: function() {
+            $("#message").text("Error al entregar la tarea.");
+          }
+        });
+      }
+    });
+  });
+</script>
+
 </head>
 <body>
   <div class="container">
@@ -62,7 +101,7 @@
           <i class="fas fa-cog"></i>
           <span class="nav-item">Ajustes</span>
         </a></li>
-        <li><a href="">
+        <li><a href="Contactenos.html" class="soporte">
           <i class="fas fa-question-circle"></i>
           <span class="nav-item">Soporte</span>
         </a></li>
@@ -111,33 +150,40 @@
         <h1>My courses</h1>
         <div class="course-box">
           <ul>
-            <li class="active">In progress</li>
-            <li>explorar</li>
-            <li>En progreso</li>
-            <li>Terminados</li>
+            <a class="active" href="DashboardStudent.html">Actualizar</a>
+            <a class="v13_70" href="Explorar.html">Explorar</a>
+            <a class="v13_72" href="Acerca.html">Acerca De</a>            
           </ul>
           <div class="course">
             <div class="box">
               <h3>Suma</h3>
-              <p>80% - progress</p>
-              <button>continuar</button>
+              <p>sigue tus ejercicios</p>
+              <button onclick="direccion1()">continuar</button>
               <i class="fas fa-plus plus"></i>
 
             </div>
             <div class="box">
               <h3>Resta</h3>
-              <p>50% - progress</p>
-              <button>continuar</button>
+              <p>Sigue tus ejercicios</p>
+              <button onclick="direccion2()">continuar</button>
               <i class="fas fa-minus minus"></i>
             </div>
             <div class="box">
               <h3>Conteo de numeros</h3>
-              <p>30% - progress</p>
-              <button>continuar</button>
+              <p>Sigue tus ejercicios</p>
+              <button onclick="direccion3()">continuar</button>
               <i class="fas fa-font font"></i>
             </div>
           </div>
         </div>
+      </section>
+      <section class="Tarea">
+        <h1>Tareas</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+          <input type="file" name="file" id="file-input" accept=".pdf, .doc, .docx" required />
+          <button class="boton" type="submit">Entregar Tarea</button>
+        </form>
+        <div id="message"></div>
       </section>
     </section>
   </div>
